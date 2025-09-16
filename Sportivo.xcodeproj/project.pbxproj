@@ -27,6 +27,8 @@
 		4F395F6F2E79738600B55095 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F395F6D2E79738600B55095 /* FavoriteViewController.swift */; };
 		4F395F702E79738600B55095 /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F395F6E2E79738600B55095 /* FavoriteViewController.xib */; };
 		4F395F732E79758700B55095 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F395F722E79758700B55095 /* HomeTabBarViewController.swift */; };
+		4F395F782E79D30600B55095 /* SportItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F395F772E79D30600B55095 /* SportItem.swift */; };
+		4F395F7C2E79DEA600B55095 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F395F7B2E79DEA600B55095 /* HomePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		4F395F6D2E79738600B55095 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		4F395F6E2E79738600B55095 /* FavoriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
 		4F395F722E79758700B55095 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
+		4F395F772E79D30600B55095 /* SportItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportItem.swift; sourceTree = "<group>"; };
+		4F395F7B2E79DEA600B55095 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,9 +72,9 @@
 		4F0CD8512E74DED6008FA334 /* Home View controller */ = {
 			isa = PBXGroup;
 			children = (
-				4F0CD84D2E74DBD5008FA334 /* HomeViewController.swift */,
-				4F0CD84E2E74DBD6008FA334 /* HomeViewController.xib */,
-				4F0CD8562E75BECB008FA334 /* HomeCell */,
+				4F395F762E79D0F500B55095 /* Model */,
+				4F395F752E79D0F200B55095 /* view controllers */,
+				4F395F742E79D0EC00B55095 /* presenter */,
 			);
 			path = "Home View controller";
 			sourceTree = "<group>";
@@ -165,6 +169,32 @@
 			path = "tab Bar ";
 			sourceTree = "<group>";
 		};
+		4F395F742E79D0EC00B55095 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4F395F7B2E79DEA600B55095 /* HomePresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		4F395F752E79D0F200B55095 /* view controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4F0CD84D2E74DBD5008FA334 /* HomeViewController.swift */,
+				4F0CD84E2E74DBD6008FA334 /* HomeViewController.xib */,
+				4F0CD8562E75BECB008FA334 /* HomeCell */,
+			);
+			path = "view controllers";
+			sourceTree = "<group>";
+		};
+		4F395F762E79D0F500B55095 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4F395F772E79D30600B55095 /* SportItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -247,9 +277,11 @@
 				4F36074F2E74D496009BA6C3 /* ViewController.swift in Sources */,
 				4F36074B2E74D496009BA6C3 /* AppDelegate.swift in Sources */,
 				4F0CD8592E75C010008FA334 /* LeaguesViewController.swift in Sources */,
+				4F395F782E79D30600B55095 /* SportItem.swift in Sources */,
 				4F395F6F2E79738600B55095 /* FavoriteViewController.swift in Sources */,
 				4F36074D2E74D496009BA6C3 /* SceneDelegate.swift in Sources */,
 				4F3607632E74D4F6009BA6C3 /* LandingViewController.swift in Sources */,
+				4F395F7C2E79DEA600B55095 /* HomePresenter.swift in Sources */,
 				4F3607552E74D496009BA6C3 /* Sportivo.xcdatamodeld in Sources */,
 				4F0CD85E2E75C212008FA334 /* LeaguesTableViewCell.swift in Sources */,
 				4F0CD84F2E74DBD6008FA334 /* HomeViewController.swift in Sources */,

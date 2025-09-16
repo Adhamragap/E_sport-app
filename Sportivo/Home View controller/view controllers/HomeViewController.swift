@@ -11,6 +11,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var sportLabel: UILabel!
     
     @IBOutlet weak var sportsCollectionView: UICollectionView!
+    var presenter = HomePresenter()
+    var sportsArray = [SportItem]()
     override func viewDidLoad() {
         super.viewDidLoad()
         sportLabel.textColor = UIColor(named: "MainColor")
@@ -19,17 +21,18 @@ class HomeViewController: UIViewController {
         sportsCollectionView.delegate = self
         sportsCollectionView.dataSource = self
         sportsCollectionView.register(UINib(nibName: "HomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HomeCollectionViewCell")
-       
+            sportsArray =   presenter.getArray()
     }
 
 }
 extension HomeViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return sportsArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionViewCell", for: indexPath) as! HomeCollectionViewCell
+        cell.configure(sport: sportsArray[indexPath.row])
         
         return cell
     }
@@ -47,6 +50,6 @@ extension HomeViewController:UICollectionViewDelegate{
 }
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: sportsCollectionView.frame.width / 2 - 5, height: sportsCollectionView.frame.height / 2 - 10)
+        return CGSize(width: sportsCollectionView.frame.width / 2 - 10, height: sportsCollectionView.frame.height / 2 - 40)
     }
 }
