@@ -17,6 +17,11 @@ class HomeCollectionViewCell: UICollectionViewCell {
         sportStack.layer.borderWidth = 1
           updateColor()
         sportStack.layer.cornerRadius = sportStack.frame.height / 6
+        sportImage.layer.cornerRadius = sportStack.frame.height / 6
+    }
+    func configure(sport:SportItem){
+        sportImage.image = UIImage(named: sport.imageName)
+        sportLabelName.text = sport.name
     }
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
