@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uBo-XV-kOp">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="54" width="414" height="808"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leagues" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhk-7U-7zg">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="36"/>
@@ -30,7 +30,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Dcz-Ml-CFK">
-                            <rect key="frame" x="0.0" y="36" width="414" height="782"/>
+                            <rect key="frame" x="0.0" y="36" width="414" height="772"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </tableView>
                     </subviews>
@@ -40,7 +40,7 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="uBo-XV-kOp" secondAttribute="bottom" id="0gD-bJ-8Ja"/>
-                <constraint firstItem="uBo-XV-kOp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ET6-R7-CIX"/>
+                <constraint firstItem="uBo-XV-kOp" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="10" id="CBf-hy-ET1"/>
                 <constraint firstItem="uBo-XV-kOp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dF0-UD-Bhm"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uBo-XV-kOp" secondAttribute="trailing" id="dXw-Na-ifD"/>
             </constraints>

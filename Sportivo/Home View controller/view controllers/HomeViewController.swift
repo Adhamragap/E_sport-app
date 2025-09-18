@@ -15,6 +15,7 @@ class HomeViewController: UIViewController {
     var sportsArray = [SportItem]()
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         sportLabel.textColor = UIColor(named: "MainColor")
 //        sportLabel.font = UIFont(name: "Futura-Bold", size: 22)
         navigationItem.hidesBackButton = true
@@ -44,6 +45,8 @@ extension HomeViewController:UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let leaguesVC = LeaguesViewController(nibName: "LeaguesViewController", bundle: nil)
         if let nav = self.navigationController {
+            Session.leagueType = sportsArray[indexPath.row].apiKeyWord
+            leaguesVC.leagueName = Session.leagueType
                 nav.pushViewController(leaguesVC, animated: true)
             }
     }

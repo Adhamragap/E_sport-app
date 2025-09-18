@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -18,41 +18,40 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="G30-EP-656">
-                        <rect key="frame" x="0.0" y="0.0" width="365" height="144"/>
+                        <rect key="frame" x="12" y="0.0" width="353" height="144"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uefa" translatesAutoresizingMaskIntoConstraints="NO" id="b8P-x2-ZYa">
-                                <rect key="frame" x="8" y="32" width="80" height="80"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b8P-x2-ZYa">
+                                <rect key="frame" x="0.0" y="37" width="70" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="4oq-B3-tiu"/>
-                                    <constraint firstAttribute="width" secondItem="b8P-x2-ZYa" secondAttribute="height" multiplier="1:1" id="Ko6-8V-44w"/>
+                                    <constraint firstAttribute="width" secondItem="b8P-x2-ZYa" secondAttribute="height" multiplier="1:1" id="BRh-Bb-04a"/>
+                                    <constraint firstAttribute="width" constant="70" id="zPC-1U-MK0"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UEFA Champions League" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hb9-5E-M9G">
-                                <rect key="frame" x="98" y="62" width="259" height="20.5"/>
+                                <rect key="frame" x="80" y="62" width="273" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemBlueColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="G30-EP-656" secondAttribute="trailing" id="39e-9m-hIr"/>
-                    <constraint firstAttribute="bottom" secondItem="G30-EP-656" secondAttribute="bottom" id="bBe-hM-RVP"/>
-                    <constraint firstItem="G30-EP-656" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="oyz-Wk-ZFO"/>
-                    <constraint firstItem="G30-EP-656" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="r45-I3-OZH"/>
+                    <constraint firstAttribute="bottom" secondItem="G30-EP-656" secondAttribute="bottom" id="HCJ-mz-FX7"/>
+                    <constraint firstItem="G30-EP-656" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Mww-bf-lT1"/>
+                    <constraint firstItem="G30-EP-656" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="cOp-UI-GLa"/>
+                    <constraint firstAttribute="trailing" secondItem="G30-EP-656" secondAttribute="trailing" id="hg8-OQ-kqo"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="leagueImage" destination="b8P-x2-ZYa" id="UMU-A1-ka1"/>
+                <outlet property="leagueNameLabel" destination="hb9-5E-M9G" id="mYf-WX-yFx"/>
             </connections>
-            <point key="canvasLocation" x="170.28985507246378" y="131.25"/>
+            <point key="canvasLocation" x="168.80000000000001" y="130.43478260869566"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="uefa" width="1920" height="1080"/>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
