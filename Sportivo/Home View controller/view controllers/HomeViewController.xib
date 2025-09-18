@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="yDM-tv-HYh">
-                    <rect key="frame" x="20" y="44" width="374" height="798"/>
+                    <rect key="frame" x="20" y="54" width="374" height="788"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sports" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4j-eW-Ftd">
                             <rect key="frame" x="0.0" y="0.0" width="374" height="35"/>
@@ -30,7 +30,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="b4o-KT-m81">
-                            <rect key="frame" x="0.0" y="40" width="374" height="758"/>
+                            <rect key="frame" x="0.0" y="40" width="374" height="748"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="g8Z-Zl-Q7S">
                                 <size key="itemSize" width="128" height="128"/>
@@ -47,7 +47,7 @@
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yDM-tv-HYh" secondAttribute="trailing" constant="20" id="Qu0-Ye-AZ8"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="yDM-tv-HYh" secondAttribute="bottom" constant="20" id="SNS-9j-u8G"/>
-                <constraint firstItem="yDM-tv-HYh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="jUl-mt-E1D"/>
+                <constraint firstItem="yDM-tv-HYh" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="r52-hT-YK6"/>
                 <constraint firstItem="yDM-tv-HYh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="yiW-Ew-dGK"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="67.633928571428569"/>
