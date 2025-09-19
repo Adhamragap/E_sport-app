@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -66,6 +66,10 @@
 		4F395FC82E7B6B8300B55095 /* LeaguePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguePresenter.swift; sourceTree = "<group>"; };
 		4F395FCA2E7BFE2300B55095 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		103A9AB82E7DA367003C6156 /* CompositionalLeague */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = CompositionalLeague; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4F3607442E74D496009BA6C3 /* Frameworks */ = {
@@ -132,6 +136,7 @@
 				4F36074C2E74D496009BA6C3 /* SceneDelegate.swift */,
 				4F36074E2E74D496009BA6C3 /* ViewController.swift */,
 				4F3607502E74D496009BA6C3 /* Main.storyboard */,
+				103A9AB82E7DA367003C6156 /* CompositionalLeague */,
 				4F0CD8512E74DED6008FA334 /* Home View controller */,
 				4F3607652E74D4FC009BA6C3 /* Landing Screen */,
 				4F0CD85B2E75C14C008FA334 /* Leagues View Controller */,
@@ -247,6 +252,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				103A9AB82E7DA367003C6156 /* CompositionalLeague */,
 			);
 			name = Sportivo;
 			packageProductDependencies = (

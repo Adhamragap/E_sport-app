@@ -44,6 +44,10 @@ extension LeaguesViewController:UITableViewDataSource {
     }
 }
 extension LeaguesViewController:UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let leagueVC = Compositional(nibName: "Compositional", bundle: nil)
+        self.navigationController?.pushViewController(leagueVC, animated: true)
+    }
         
 }
 extension LeaguesViewController:SendLeagueToViewProtocol {
@@ -53,4 +57,5 @@ extension LeaguesViewController:SendLeagueToViewProtocol {
             self.leaguesTableView.reloadData()
         }
     }
+    
 }
