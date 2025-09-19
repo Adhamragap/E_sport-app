@@ -44,10 +44,6 @@ extension LeaguesViewController:UITableViewDataSource {
     }
 }
 extension LeaguesViewController:UITableViewDelegate{
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let leagueVC = Compositional.init(nibName: "Compositional", bundle: nil)
-        navigationController?.pushViewController(leagueVC, animated: true)
-    }
         
 }
 extension LeaguesViewController:SendLeagueToViewProtocol {
