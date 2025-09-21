@@ -8,4 +8,6 @@
 import Foundation
 class Session {
     static var leagueType:String = ""
+    static var leagueKey:Int = 0
+    static var leagueName:String = ""
 }

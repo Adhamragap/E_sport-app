@@ -44,7 +44,13 @@ extension LeaguesViewController:UITableViewDataSource {
     }
 }
 extension LeaguesViewController:UITableViewDelegate{
-        
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let vc = Compositional(nibName: "Compositional", bundle: nil)
+        Session.leagueKey = leaguesArray[indexPath.row].league_key
+        Session.leagueName = leaguesArray[indexPath.row].league_name
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 extension LeaguesViewController:SendLeagueToViewProtocol {
     func sendLeague(league: League) {
