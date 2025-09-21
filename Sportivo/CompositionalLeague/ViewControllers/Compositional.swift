@@ -45,6 +45,7 @@ class Compositional: UIViewController {
             navigationItem.rightBarButtonItem?.tintColor = .label
         }
     }
+   
         private func setupCollectionView() {
             CollectionView.register(UINib(nibName: "EventCell", bundle: nil), forCellWithReuseIdentifier: "EventCell")
             
@@ -217,7 +218,21 @@ extension Compositional: UICollectionViewDataSource, UICollectionViewDelegate {
             fatalError("Unexpected section")
         }
     }
-
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch indexPath.section {
+        case 0 :
+            print("section 1 clicked")
+        case 1:
+            print("section 2 clicked")
+        case 2 :
+            print("section 3 clicked")
+            let vc = TeamDetailsViewController(nibName: "TeamDetailsViewController", bundle: nil)
+            Session.teamKey = standingsArray[indexPath.item].team_key
+            self.navigationController?.pushViewController(vc, animated: true)
+        default:
+            return
+        }
+    }
         
         func collectionView(_ collectionView: UICollectionView,
                             viewForSupplementaryElementOfKind kind: String,

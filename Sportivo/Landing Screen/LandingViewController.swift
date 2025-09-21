@@ -15,10 +15,12 @@ class LandingViewController: UIViewController {
         super.viewDidLoad()
         labelS.text = ""
         labelS.textColor = UIColor(named: "MainColor")
+        labelS.font = UIFont(name: "MarkerFelt-Thin", size: 50.0)
         let titleText = "SPORTIVO🥇"
         for letter in titleText {
             Timer.scheduledTimer(withTimeInterval: 0.2 * charIndex , repeats: false) { timer in
                 self.labelS.text?.append(letter)
+                
             }
             charIndex += 1
            
