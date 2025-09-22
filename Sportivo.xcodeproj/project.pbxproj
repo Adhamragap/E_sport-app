@@ -46,6 +46,7 @@
 		4F3F43752E7F781400C3374B /* FixtureLeaguePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3F43742E7F781400C3374B /* FixtureLeaguePresenter.swift */; };
 		4F3F43782E801D3B00C3374B /* ScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3F43762E801D3B00C3374B /* ScoreCell.swift */; };
 		4F3F43792E801D3B00C3374B /* ScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F3F43772E801D3B00C3374B /* ScoreCell.xib */; };
+		4F4DD0872E80CAC3009540CC /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 4F4DD0862E80CAC3009540CC /* NVActivityIndicatorView */; };
 		4FE3FEB72E80312A009C8CD9 /* StandingsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE3FEB62E80312A009C8CD9 /* StandingsResponse.swift */; };
 		4FE3FEBA2E8077FD009C8CD9 /* TeamDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE3FEB82E8077FD009C8CD9 /* TeamDetailsViewController.swift */; };
 		4FE3FEBB2E8077FD009C8CD9 /* TeamDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FE3FEB92E8077FD009C8CD9 /* TeamDetailsViewController.xib */; };
@@ -110,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F4DD0872E80CAC3009540CC /* NVActivityIndicatorView in Frameworks */,
 				4F395FC52E7B689F00B55095 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,6 +382,7 @@
 			name = Sportivo;
 			packageProductDependencies = (
 				4F395FC42E7B689F00B55095 /* SDWebImage */,
+				4F4DD0862E80CAC3009540CC /* NVActivityIndicatorView */,
 			);
 			productName = Sportivo;
 			productReference = 4F3607472E74D496009BA6C3 /* Sportivo.app */;
@@ -411,6 +414,7 @@
 			mainGroup = 4F36073E2E74D496009BA6C3;
 			packageReferences = (
 				4F395FC32E7B689F00B55095 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				4F4DD0852E80CAC3009540CC /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
 			);
 			productRefGroup = 4F3607482E74D496009BA6C3 /* Products */;
 			projectDirPath = "";
@@ -710,6 +714,14 @@
 				version = 5.12.0;
 			};
 		};
+		4F4DD0852E80CAC3009540CC /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -717,6 +729,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4F395FC32E7B689F00B55095 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
+		};
+		4F4DD0862E80CAC3009540CC /* NVActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F4DD0852E80CAC3009540CC /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorView;
 		};
 /* End XCSwiftPackageProductDependency section */
 

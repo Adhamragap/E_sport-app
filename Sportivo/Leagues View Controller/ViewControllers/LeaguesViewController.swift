@@ -6,11 +6,16 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 class LeaguesViewController: UIViewController{
    
     
-
+    @IBOutlet weak var loader: NVActivityIndicatorView!
+    
+   
+    
+   
     @IBOutlet weak var leaguesLabel: UILabel!
     @IBOutlet weak var leaguesTableView: UITableView!
     var leaguesArray = [LeagueItem]()
@@ -18,6 +23,12 @@ class LeaguesViewController: UIViewController{
     var leagueName:String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+      
+        loader.type = .pacman
+        loader.color = UIColor(named: "MainColor")!
+        loader.startAnimating()
+     
         leaguesLabel.textColor = UIColor(named: "MainColor")
         leaguesTableView.delegate = self
         leaguesTableView.dataSource = self
@@ -35,6 +46,7 @@ extension LeaguesViewController:UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "LeaguesTableViewCell", for: indexPath) as? LeaguesTableViewCell else {return UITableViewCell()}
         cell.configure(league: leaguesArray[indexPath.row])
+      
         return cell
     }
     
@@ -54,9 +66,12 @@ extension LeaguesViewController:UITableViewDelegate{
 }
 extension LeaguesViewController:SendLeagueToViewProtocol {
     func sendLeague(league: League) {
+       
         leaguesArray = league.result
         DispatchQueue.main.async {
+            self.loader.stopAnimating()
             self.leaguesTableView.reloadData()
         }
     }
 }
+

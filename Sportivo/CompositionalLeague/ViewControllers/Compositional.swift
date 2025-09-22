@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 class Compositional: UIViewController {
 
     @IBOutlet weak var CollectionView: UICollectionView!
+    @IBOutlet weak var loader: NVActivityIndicatorView!
     
     
     var upComingArray = [Match]()
@@ -18,6 +20,9 @@ class Compositional: UIViewController {
     var presenter : FixtureLeaguePresenter?
     override func viewDidLoad() {
             super.viewDidLoad()
+        loader.type = .pacman
+        loader.color = UIColor(named: "MainColor")!
+        loader.startAnimating()
         title = Session.leagueName
         presenter = FixtureLeaguePresenter(delegete: self)
         presenter?.getUpComingFixtureDataFromModel()
@@ -252,11 +257,14 @@ extension Compositional: UICollectionViewDataSource, UICollectionViewDelegate {
     }
 extension Compositional:FixtureLeaguePresenterProtocol{
     func didRecieveStandings(standingsResponse: StandingsResponse) {
+       
         standingsArray = standingsResponse.result.total
+        
         if standingsArray.count == 0 {
             standingsArray = [Standing(standing_place: 0, standing_place_type: "", standing_team: "", standing_P: 0, standing_W: 0, standing_D: 0, standing_L: 0, standing_F: 0, standing_A: 0, standing_GD: 0, standing_PTS: 0, team_key: 0, league_key: 0, league_season: "", league_round: "", standing_updated: "", fk_stage_key: 0, stage_name: "", team_logo: "", standing_LP: 0, standing_WP: 0)]
         }
         DispatchQueue.main.async {
+            self.loader.stopAnimating()
             self.CollectionView.reloadData()
         }
     }

@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "NVActivityIndicatorView",
+        "repositoryURL": "https://github.com/ninjaprox/NVActivityIndicatorView.git",
+        "state": {
+          "branch": null,
+          "revision": "121455c4e630fcb95aaefd7e4257b0c2e3cfe6d5",
+          "version": "5.2.0"
+        }
+      },
+      {
         "package": "SDWebImage",
         "repositoryURL": "https://github.com/SDWebImage/SDWebImage",
         "state": {

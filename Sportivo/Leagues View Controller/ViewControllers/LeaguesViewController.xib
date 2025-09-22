@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="leaguesLabel" destination="Qhk-7U-7zg" id="cWt-Eu-qwY"/>
                 <outlet property="leaguesTableView" destination="Dcz-Ml-CFK" id="80Y-HU-Alq"/>
+                <outlet property="loader" destination="oP4-87-HOE" id="YQk-fj-ZBm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -35,14 +36,24 @@
                         </tableView>
                     </subviews>
                 </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oP4-87-HOE" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                    <rect key="frame" x="157" y="398" width="100" height="100"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="341-L3-CzO"/>
+                        <constraint firstAttribute="width" constant="100" id="sUJ-C4-QTM"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="uBo-XV-kOp" secondAttribute="bottom" id="0gD-bJ-8Ja"/>
                 <constraint firstItem="uBo-XV-kOp" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="10" id="CBf-hy-ET1"/>
+                <constraint firstItem="oP4-87-HOE" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="K1z-ri-V20"/>
                 <constraint firstItem="uBo-XV-kOp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dF0-UD-Bhm"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uBo-XV-kOp" secondAttribute="trailing" id="dXw-Na-ifD"/>
+                <constraint firstItem="oP4-87-HOE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="shG-UH-xoJ"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="97.767857142857139"/>
         </view>

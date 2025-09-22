@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TeamDetailsViewController" customModule="Sportivo" customModuleProvider="target">
             <connections>
                 <outlet property="coachNameLabel" destination="UGJ-IG-ST3" id="Zb8-ad-7Sn"/>
+                <outlet property="loader" destination="dNb-8L-Pcf" id="1s2-zF-B37"/>
                 <outlet property="playersTableView" destination="FDI-W7-AO7" id="1wD-H4-PT6"/>
                 <outlet property="teamPhoto" destination="iPo-b8-AVc" id="vyV-p2-6PD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -56,6 +57,14 @@
                     </constraints>
                     <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                 </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dNb-8L-Pcf" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                    <rect key="frame" x="132" y="373" width="150" height="150"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="GmX-a6-ib2"/>
+                        <constraint firstAttribute="width" constant="150" id="jQT-SL-NbW"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -64,6 +73,8 @@
                 <constraint firstItem="aSW-E1-t1u" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="NUy-uF-cba"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aSW-E1-t1u" secondAttribute="trailing" id="Pb4-wb-9bf"/>
                 <constraint firstItem="aSW-E1-t1u" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="j3C-GH-F2e"/>
+                <constraint firstItem="dNb-8L-Pcf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="m3J-4O-Hq5"/>
+                <constraint firstItem="dNb-8L-Pcf" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="yJ1-qO-e6j"/>
             </constraints>
             <point key="canvasLocation" x="139" y="81"/>
         </view>
