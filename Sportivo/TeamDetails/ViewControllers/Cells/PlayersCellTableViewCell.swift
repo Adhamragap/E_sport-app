@@ -20,6 +20,7 @@ class PlayersCellTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         cellStack.layer.cornerRadius = cellStack.frame.height / 6
+        playerImage.layer.cornerRadius = playerImage.frame.height / 4
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

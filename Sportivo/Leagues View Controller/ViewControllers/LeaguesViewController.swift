@@ -12,10 +12,6 @@ class LeaguesViewController: UIViewController{
    
     
     @IBOutlet weak var loader: NVActivityIndicatorView!
-    
-   
-    
-   
     @IBOutlet weak var leaguesLabel: UILabel!
     @IBOutlet weak var leaguesTableView: UITableView!
     var leaguesArray = [LeagueItem]()
@@ -24,7 +20,7 @@ class LeaguesViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      
+        checkInternert()
         loader.type = .pacman
         loader.color = UIColor(named: "MainColor")!
         loader.startAnimating()
@@ -34,10 +30,23 @@ class LeaguesViewController: UIViewController{
         leaguesTableView.dataSource = self
         leaguesTableView.register(UINib(nibName: "LeaguesTableViewCell", bundle: nil), forCellReuseIdentifier: "LeaguesTableViewCell")
       //  lp.leagueName = Session.leagueType
-        lp  = LeaguePresenter(sendLeagueToView:self)
-        lp?.getDataFromRemote()
+       
     }
-}
+    private func checkInternert(){
+        let check = CheckInternet()
+        if check.Connection() {
+            lp  = LeaguePresenter(sendLeagueToView:self)
+            lp?.getDataFromRemote()
+      //  https:api.themoviedb.org/3/discover/movie?api_key=0bb6c7c539136cb79804f10c8df0f767&language=en
+        }else {
+            let alert = UIAlertController(title: "Offline", message: "You are offline Kindly check your internet connection.", preferredStyle: .alert)
+               alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+
+ 
+  }
 extension LeaguesViewController:UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return leaguesArray.count
