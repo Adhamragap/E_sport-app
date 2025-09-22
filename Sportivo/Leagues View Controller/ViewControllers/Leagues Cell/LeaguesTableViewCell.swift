@@ -8,11 +8,14 @@
 import UIKit
 import SDWebImage
 
+
 class LeaguesTableViewCell: UITableViewCell {
    
     
     @IBOutlet weak var leagueNameLabel: UILabel!
     @IBOutlet weak var leagueImage: UIImageView!
+   
+  
     override func awakeFromNib() {
         super.awakeFromNib()
       
@@ -37,3 +40,4 @@ class LeaguesTableViewCell: UITableViewCell {
     }
     
 }
+

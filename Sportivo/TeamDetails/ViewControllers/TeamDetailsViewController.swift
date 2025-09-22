@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 class TeamDetailsViewController: UIViewController {
    var playerArray = [Player]()
+    @IBOutlet weak var loader: NVActivityIndicatorView!
     @IBOutlet weak var teamPhoto: UIImageView!
    
     @IBOutlet weak var playersTableView: UITableView!
@@ -16,6 +18,9 @@ class TeamDetailsViewController: UIViewController {
     var presenter : TeamsPresenter?
     override func viewDidLoad() {
         super.viewDidLoad()
+        loader.type = .pacman
+        loader.color = UIColor(named: "MainColor")!
+        loader.startAnimating()
         playersTableView.register(UINib(nibName: "PlayersCellTableViewCell", bundle: nil), forCellReuseIdentifier: "PlayersCellTableViewCell")
         presenter = TeamsPresenter(delegte: self)
         presenter?.getTeamsFromApi()
@@ -46,10 +51,10 @@ extension TeamDetailsViewController:UITableViewDataSource{
 }
 extension TeamDetailsViewController:TeamsPresenterProtocol{
     func sendTeam(team: TeamDetailsResponse) {
+       
         playerArray = team.result[0].players
-       
-       
         DispatchQueue.main.async {
+            self.loader.stopAnimating()
             self.playersTableView.reloadData()
             self.title = team.result[0].team_name
             self.coachNameLabel.text = team.result[0].coaches[0].coach_name ?? "no coach name"
